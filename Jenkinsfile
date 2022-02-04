@@ -379,7 +379,7 @@ pipeline {
         stage('发送确认邮件') {
             agent none
             steps {
-                mail(to: '17512080612@163.com', subject: '构建结果', body: "构建成功了  $BUILD_NUMBER")
+                mail(to: '1125385880@qq.com', subject: '构建结果', body: "构建成功了  $BUILD_NUMBER")
             }
         }
 
