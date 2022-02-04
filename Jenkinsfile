@@ -10,7 +10,7 @@ pipeline {
             agent none
             steps {
                 container('maven') {
-                    git(url: 'https://gitee.com/leifengyang/yygh-parent.git', credentialsId: 'gitee-id', branch: 'master', changelog: true, poll: false)
+                    git(url: 'https://github.com/HuangMingwang/yygh-parent.git', credentialsId: 'github-id', branch: 'master', changelog: true, poll: false)
                     sh 'ls -al'
                 }
 
@@ -389,10 +389,10 @@ pipeline {
         GITHUB_CREDENTIAL_ID = 'github-id'
         KUBECONFIG_CREDENTIAL_ID = 'demo-kubeconfig'
         REGISTRY = 'registry.cn-hangzhou.aliyuncs.com'
-        DOCKERHUB_NAMESPACE = 'lfy_hello'
+        DOCKERHUB_NAMESPACE = 'yc_hospital'
         GITHUB_ACCOUNT = 'kubesphere'
         APP_NAME = 'devops-java-sample'
-        ALIYUNHUB_NAMESPACE = 'lfy_hello'
+        ALIYUNHUB_NAMESPACE = 'yc_hospital'
     }
     parameters {
         string(name: 'TAG_NAME', defaultValue: '', description: '')
